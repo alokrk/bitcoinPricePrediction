@@ -57,7 +57,7 @@ def computeDelta(wt, X, Xi):
       num = np.sum((X[:len(X)-1] - np.mean(X[:len(X)-1])) * (Xi.iloc[i][:len(X)-1] - np.mean(Xi.iloc[i][:len(X)-1])))
 
       #print len(num)
-      den = len(X)-1 * np.std(X[:len(X)-1]) * np.std(Xi.iloc[i][:len(X)-1])
+      den = (len(X)-1) * np.std(X[:len(X)-1]) * np.std(Xi.iloc[i][:len(X)-1])
 
       sim = num/den
 
